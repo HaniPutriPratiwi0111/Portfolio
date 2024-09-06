@@ -18,37 +18,37 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Work</a>
+                  <a class="nav-link" href="#work">Work</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                  <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
     <section id="home" class="home container"> 
-        <div class="row d-flex align-items-center">
-            <div class="col-8">
+        <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
+            <div class="col-12 col-md-8">
                 <h3 class="fw-semibold">Hi! I am</h3>
                 <h1 class="fw-bold">Hani Putri Pratiwi</h1>
                 <p>I am a Fashion Designer in Indonesia</p>
                 <a class="btn button" href="Images (2)/potoroit.png" download="">Resume</a>
             </div>    
-            <div class="col-4">
+            <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
                 <img src="Images (2)/potoroit.png" alt="Potrait">
             </div>
         </div>
-        <div class="arrow w-100 d-flex align-items-center flex-column mt-5">
-            <a class="text-decoration-none text-dark" href="#about">More Info</a>
+        <a href="#about" class="text-decoration-none arrow w-100 d-flex align-items-center flex-column mt-5">
+            <div class="text-dark">More Info</div>
             <img id="arrow" class="mt-2" src="Images (2)/arrow.svg" alt="arrow icon">
-        </div>
+        </a>
     </section>
     <section id="#about" class="about container">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, recusandae.</p>
@@ -87,10 +87,10 @@
     </section>  
     <section id="work" class="work container">
         <div class="row d-flex align-items-center gap-5">
-            <div class="col">
+            <div class="col-12 col-5">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quibusdam et impedit exercitationem distinctio. Consequatur quidem quasi libero atque repellat maiores facere voluptatum assumenda, quaerat ratione iste quam officia veritatis laboriosam fugit quae. Animi, expedita possimus fugiat natus totam voluptate consequatur illum sunt vitae voluptatum odit minus tempore sequi doloremque!</p>
             </div>
-            <div class="col work-img">
+            <div class="col-12 col-6 work-img">
                 <div id="work-3" class="work-img-item">
                     <img src="Images (2)/work-3.png" alt="work 3" height="300" width="300">
                 </div>
@@ -107,40 +107,41 @@
         </div>
     </section>
     <section id="contact" class="contact container">
-        <div class="row">
-            <div class="col">
+        <div class="row d-flex align-items-center gap-5">
+            <div class="col-12 col-lg-6">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non officia consequuntur expedita cupiditate recusandae laudantium rerum repellendus voluptatibus? Tenetur earum, vel perspiciatis quae optio totam perferendis delectus laborum officiis maxime doloribus reprehenderit sequi dolorum. Ipsa provident mollitia tempore, enim, ducimus voluptate vero cupiditate doloremque voluptas, quaerat delectus saepe libero.</p>
                 <div class="row">
                     <div class="col d-flex align-items-center">
-                        <img src="Images (2)/Facebook.png" alt="facebook icon">
-                        <p>Hani Putri Pratiwi</p>
+                        <img class="w-25" src="Images (2)/Facebook.png" alt="facebook icon" height="45" width="45">
+                        <p class="mb-0 ms-2">Hani Putri Pratiwi</p>
                     </div>
                     <div class="col d-flex align-items-center">
-                        <img src="Images (2)/Instagram.png" alt="instagram icon">
-                        <p>@Hani_Putri</p>
+                        <img class="w-25" src="Images (2)/Instagram.png" alt="instagram icon" height="45" width="45">
+                        <p class="mb-0 ms-2">@Hani_Putri</p>
                     </div>    
                     <div class="col d-flex align-items-center">
-                        <img src="Images (2)/Twitter.png" alt="twitter icon">
-                        <p>@Hani_Putri</p>
+                        <img class="w-25" src="Images (2)/Twitter.png" alt="twitter icon" height="45" width="45">
+                        <p class="mb-0 ms-2">@Hani_Putri</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <form>
+            <div class="col-12 col-lg-5">
+                <form class="contact-form" onsubmit="onFormSubmit(event)">
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      <label for="inp_email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="inp_email" placeholder="example@gmail.com" required>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Subject</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label for="inp_subject" class="form-label">Subject</label>
+                      <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject">
                     </div>
-                    <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="mb-3">
+                        <label for="inp_message" class="form-label">Message</label>
+                        <input type="text" class="form-control" id="inp_message" placeholder="Your Message">
+                      </div>
+                      <div class="d-flex justify-content-center mt-5">
+                        <button type="submit" class="btn button">Submit</button>
+                      </div>
                   </form>
             </div>
         </div>
