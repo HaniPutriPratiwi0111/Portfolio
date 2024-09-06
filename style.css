@@ -65,6 +65,73 @@ section::before {
     display: none;
 }
 
+.work::before {
+    content: "work";
+}
+
+.work-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "work-3 work-2" "work-5 work-4";
+    gap: 16px;
+}
+
+.work-img img {
+    width: 100%;
+}
+
+.work-img-item {
+    position: relative;
+}
+
+.work-img-item:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#work-3 {
+    grid-area: work-3;
+}
+
+#work-3:hover::after {
+    content: 'bustier draping';
+}
+
+#work-2 {
+    grid-area: work-2;
+}
+
+#work-2:hover::after {
+    content: 'modern blazer designs';
+}
+
+#work-5 {
+    grid-area: work-5;
+}
+
+#work-5:hover::after {
+    content: 'fashion design sketch';
+}
+
+#work-4 {
+    grid-area: work-4;
+}
+
+#work-4:hover::after {
+    content: 'it`s me';
+}
+
 @keyframes upDown {
     0% {
         transform: translateY(0);
